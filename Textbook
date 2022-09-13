@@ -1,0 +1,62 @@
+public class Textbook {
+        private String title;
+        private String author;
+        private double price;
+        // default constructor
+        public Textbook()
+        {
+            title = "Little Lily";
+            author = " Adam Simson";
+            price = 24.99;
+        }
+// constructor with argument
+        public Textbook(String title, String author, double price)
+        {
+            this.title = title;
+            this.author = author;
+            this.price = price;
+        }
+// setters
+        public void setTitle(String title){
+
+            this.title = title;
+        }
+
+        public void setAuthor(String author) {
+
+            this.author = author;
+        }
+
+        public void setPrice(double price) {
+
+            this.price = price;
+        }
+        // getters
+        public String getTitle() {
+
+            return title;
+        }
+
+        public String getAuthor() {
+
+            return author;
+        }
+
+        public double getPrice() {
+            return price;
+
+        }
+
+        // method that returns the price after applying given percent discount
+        public double priceAfterDiscount(double pct){
+
+            return (price-((pct*price)/100));
+        }
+
+        // return String representation of the object
+        public String toString(){
+            return String.format("Title: %s, Author: %s, Price: $%.2f", title, author, price);
+        }
+
+    }
+
