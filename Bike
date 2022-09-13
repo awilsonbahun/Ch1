@@ -1,0 +1,53 @@
+/** Create a business class called Bike
+
+* Bikes should at least have number of wheels, manufacturer and year data.
+ * Additional data can be created at the programmer’s discretion.
+
+* A no-arg constructor with values of 2 for number of wheels to 2,
+ “Schwinn” for manufacturer, and 2014 for year should eb created.
+
+* Other constructors, getters, setters and toString() method should be created
+
+ */
+public class Bike {
+    private int numwheel;
+    private String manufacturer;
+    private int yeardata;
+
+    public Bike() {
+        this(2, "Schwinn", 2014);
+    }
+    public Bike(int numwheel, String manufacturer, int yeardata) {
+        this.numwheel= numwheel;
+        this.manufacturer= manufacturer;
+        this.yeardata=yeardata;
+    }
+    public int getNumwheel(){
+
+        return numwheel;
+    }
+    public void setNumwheel(int numwheel){
+        this.numwheel= numwheel;
+    }
+    public String getManufacturer(){
+
+        return manufacturer;
+    }
+    public void setManufacturer(String manufacturer){
+        this.manufacturer =manufacturer;
+
+    }
+    public int getYeardata(){
+
+        return yeardata;
+    }
+    public void setYeardata(int yeardata){
+
+        this.yeardata = yeardata;
+    }
+    public String toString() {
+        return "Number of wheel: " + numwheel + "\n" + "Manufacturer: "+ manufacturer + "\n" +
+                "Yeardata:" + yeardata+ "\n";
+    }
+
+}
