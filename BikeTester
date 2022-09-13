@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+
+public class BikeTester {
+    public static void main(String[] args) {
+        Bike bike1 = new Bike();
+
+        System.out.println(bike1);
+
+        Bike bike2 = new Bike();
+        bike2.setNumwheel(3);
+        bike2.setManufacturer("Brandston");
+        bike2.setYeardata(2017);
+        System.out.println(bike2);
+
+        ArrayList<Bike> bikeList = new ArrayList();
+        bikeList.add(bike1);
+        bikeList.add(bike2);
+
+        System.out.println(bikeList);
+        int totalWheel=0;
+        for(int i=0; i<bikeList.size();i++){
+          totalWheel+=  bikeList.get(i).getNumwheel();
+        }
+        System.out.println(" Total number of wheels is:" + totalWheel);
+int oldyear = 0;
+        for(int i=0; i<bikeList.size();i++){
+            if(bikeList.get(i).getYeardata()< bikeList.get(oldyear).getYeardata()){
+                oldyear = i;
+            }
+        }
+        System.out.println("Year of the oldest bike is:" +bikeList.get(oldyear).getYeardata());
+
+
+    }
+}
