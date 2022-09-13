@@ -1,0 +1,22 @@
+public class TextbookTester {
+
+        public static void main(String[] args) {
+
+            Textbook tbook1 = new Textbook();
+
+            Textbook tbook2 = new Textbook();
+            tbook2.setTitle("Terrible magnificient");
+            tbook2.setAuthor("Maddy Wilson");
+            tbook2.setPrice(34.99);
+
+            System.out.println("textbook1: " + tbook1);
+            System.out.println("textbook2: " + tbook2);
+
+            System.out.println("Cost of textbook2: " + tbook2.getPrice());
+
+            System.out.printf("Cost of textbook2 after discount: $%.2f", tbook2.priceAfterDiscount(9));
+
+        }
+
+    }
+
