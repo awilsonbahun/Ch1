@@ -1,1 +1,64 @@
+/**
+ * Person should have the following properties
+ * (attributes, instance variables, member variables).
+ * Pick appropriate data types:
+ * name – stores the full name of a person
+ * age – stores age of a person in whole years
+ * eyeColor – stores the color of a person’s eyes
+ * Create a no-argument constructor for this class
+ * In the constructor for the Person class,
+ * use your information to initialize the instance variables
+ * Create a 3-arg constructor that initializes the instance variables
+ * to passed parameters
+ * Create getters/accessors for each instance variable
+ * Create setters/mutators for each instance variable
+ * Override the
+ * toString() method to return a clear message providing details of each person
+ * Create instance method talk() that prints a message “Welcome, coders!
+ * I am ”, underline should be replaced by the person’s name.
+ * It does not need any parameters and does not return any values.
+ */
+public class Person {
+    private String name;
+    private int age;
+    private String eyecolor;
+    public Person() {
+        this("Sam", 24,"brown");
+    }
+    public Person(String name, int age, String eyecolor) {
+        this.name= name;
+        this.age= age;
+        this.eyecolor=eyecolor;
+    }
+    public String getName(){
+        return name;
+    }
+    public void setName(String name){
+        this.name= name;
+    }
+    public int getAge(){
 
+        return age;
+    }
+    public void setAge(int age){
+        this.age =age;
+
+    }
+    public String getEyecolor(){
+
+        return eyecolor;
+    }
+    public void setEyecolor(String eyecolor){
+
+        this.eyecolor=eyecolor;
+    }
+    public void methodTalk(){
+        System.out.println("Welcome, coders,I am " + name+" "+ age +" "+ eyecolor);
+    }
+    public String toString() {
+        return "Name: " + name + "\n" + "Age: "+ age + "\n" +
+                "Eyecolor:" + eyecolor;
+    }
+
+
+}
